@@ -5,8 +5,10 @@
 
 from dataclasses import dataclass
 
+
 class ColumnIndex:
     """Column indices (0-based) for CSV parsing."""
+
     BEGIN_TIME = 0
     MANAGED_ELEMENT_NAME = 6
     SN_ADDITION_NUM = 21
@@ -24,6 +26,7 @@ class ColumnIndex:
 @dataclass
 class KPIThreshold:
     """KPI thresholds for PASS/FAIL evaluation."""
+
     SGNB_ADD_SUCCESS_RATE_MIN = 95.0
     SGNB_DROP_RATE_MAX = 5.0
     DL_THROUGHPUT_MIN = 5.0
@@ -31,6 +34,4 @@ class KPIThreshold:
     DL_SPECTRUM_EFFICIENCY_MIN = 0.9
 
 
-
 TOWERID_PATTERN = r"[A-Z]+-[A-Z]+-[A-Z]+-\d+"
-

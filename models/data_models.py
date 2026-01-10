@@ -11,6 +11,7 @@ from typing import Optional
 @dataclass
 class KPIValues:
     """Calculated KPI values for a tower on a specific date."""
+
     sgnb_add_success_rate: Optional[float] = None
     sgnb_drop_rate: Optional[float] = None
     dl_user_throughput: Optional[float] = None
@@ -21,6 +22,7 @@ class KPIValues:
 @dataclass
 class KPIStatus:
     """PASS/FAIL status for each KPI."""
+
     sgnb_add_success_rate: str = "N/A"
     sgnb_drop_rate: str = "N/A"
     dl_user_throughput: str = "N/A"
@@ -31,6 +33,7 @@ class KPIStatus:
 @dataclass
 class TowerReport:
     """Complete report for a single tower on a specific date."""
+
     tower_id: str
     report_date: date
     kpi_values: KPIValues
